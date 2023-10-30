@@ -164,10 +164,10 @@ def main():
         print("Use floats or decimals for calculations?")
         choice = input("Input: (d) for decimals/ (f) for floats: ")
         if choice == "d":
-            decimal_calculator()
+            d()
     
         elif choice == "f":
-            float_calculator()
+            f()
         
         else:
             print()
