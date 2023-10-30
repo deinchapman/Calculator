@@ -29,7 +29,7 @@ def exponentation(x, y):
 def floordivide(x, y):
     return(x // y)
 
-def f():
+def float_calculator():
     print("Select operation.")
     print("1.Add")
     print("2.Subtract")
