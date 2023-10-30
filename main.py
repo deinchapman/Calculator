@@ -91,7 +91,7 @@ def float_calculator():
         else:
             print("Invalid Input")
         
-def d():
+def decimal_calculator():
     print("Select operation.")
     print("1.Add")
     print("2.Subtract")
