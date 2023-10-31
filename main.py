@@ -58,28 +58,28 @@ def float_calculator():
                 continue
 
             if choice == '1': 
-                    round(print(num1, "+", num2, "=", (add(num1, num2))), 2)
+                    print(num1, "+", num2, "=", round(add(num1, num2), 2))
 
             elif choice == '2':
-                round(print(num1, "-", num2, "=", subtract(num1, num2)), 2)
+                print(num1, "-", num2, "=", round(subtract(num1, num2), 2))
 
             elif choice == '3':
-                round(print(num1, "*", num2, "=", multiply(num1, num2)), 2)
+                print(num1, "*", num2, "=", round(multiply(num1, num2), 2))
 
             elif choice == '4':
                 try:
-                    round(print(num1, "/", num2, "=", divide(num1, num2)), 2)
+                    print(num1, "/", num2, "=", round(divide(num1, num2), 2))
                 except ZeroDivisionError:
                     print("Can't divide 0")
                 
             elif choice == '5':
-                round(print(num1, "%", num2, "=", modulus(num1, num2)), 2)
+                print(num1, "%", num2, "=", round(modulus(num1, num2), 2))
 
             elif choice == '6':
-                round(print(num1, "**", num2, "=", exponentation(num1, num2)), 2)
+                print(num1, "**", num2, "=", round(exponentation(num1, num2), 2))
 
             elif choice == '7':
-                round(print(num1, "//", num2, "=", floordivide(num1, num2)), 2)
+                print(num1, "//", num2, "=", round(floordivide(num1, num2), 2))
         
         # check if user wants another calculation
         # break the while loop if answer is no
