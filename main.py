@@ -67,18 +67,21 @@ def float_calculator():
                 print(num1, "*", num2, "=", round(multiply(num1, num2), 2))
 
             elif choice == '4':
-                try:
-                    print(num1, "/", num2, "=", round(divide(num1, num2), 2))
-                except ZeroDivisionError:
+                if num2 == 0:
                     print("Can't divide 0")
-                
+                    continue
+                print(num1, "/", num2, "=", round(divide(num1, num2), 2))
             elif choice == '5':
+                if num2 == 0:
+                    print("Can't modulo 0")
+                    continue
                 print(num1, "%", num2, "=", round(modulus(num1, num2), 2))
-
             elif choice == '6':
                 print(num1, "**", num2, "=", round(exponentation(num1, num2), 2))
-
             elif choice == '7':
+                if num2 == 0:
+                    print("Can't divide 0")
+                    continue
                 print(num1, "//", num2, "=", round(floordivide(num1, num2), 2))
         
         # check if user wants another calculation
@@ -118,33 +121,30 @@ def decimal_calculator():
             except decimal.InvalidOperation:
                 print("Invalid input. Please enter a number.")
                 continue
-
             if choice == '1': 
                 print(num1, "+", num2, "=", add(num1, num2))
-
             elif choice == '2':
                 print(num1, "-", num2, "=", subtract(num1, num2))
-
             elif choice == '3':
                 print(num1, "*", num2, "=", multiply(num1, num2))
-
             elif choice == '4':
-                try:
-                    print(num1, "/", num2, "=", divide(num1, num2))
-                except decimal.DivisionByZero:
-                    print ("Can't divide 0")       
-            
+                if num2 == 0:
+                    print("Can't divide 0")
+                    continue
+                print(num1, "/", num2, "=", divide(num1, num2))
             elif choice == '5':
+                if num2 == 0:
+                    print("Can't modulo 0")
+                    continue
                 print(num1, "%", num2, "=", modulus(num1, num2))
-
             elif choice == '6':
                 print(num1, "**", num2, "=", exponentation(num1, num2))
-
             elif choice == '7':
+                if num2 == 0:
+                    print("Can't divide 0")
+                    continue
                 print(num1, "//", num2, "=", floordivide(num1, num2))
-                
-            
-        
+
             # check if user wants another calculation
             # break the while loop if answer is no
             next_calculation = input("Let's do next calculation? (yes/no): ")
